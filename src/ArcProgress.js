@@ -41,6 +41,7 @@ class ArcProgress extends Component {
         const context = this.setContext();
         this.setBackground(context);
         this.setForeground(context);
+        this.setLabel(context);
     }
 
     redrawArc() {
@@ -71,6 +72,13 @@ class ArcProgress extends Component {
         .datum({ endAngle: this.tau * this.props.percentComplete })
         .style('fill', this.props.foregroundColor)
         .attr('d', this.arc());
+    }
+
+    setLabel(context) {
+        return context.append('text')
+            .attr('transform', `translate(${height / 2}, ${width / 2})`)
+            .attr('text-anchor', 'middle')
+            .text('English Diagnostic');
     }
 
 }
