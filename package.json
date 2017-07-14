@@ -1,6 +1,6 @@
 {
     "name": "react-npm-demo",
-    "version": "0.0.1",
+    "version": "0.0.4",
     "description": "A demo for creating React Npm packages with ES2015",
     "repository": {
         "type": "git",
