@@ -68,5 +68,6 @@ export default Demo;
 ```
 
 The result should be like the below.
+
 ![](https://raw.githubusercontent.com/husm/react-npm-demo/master/demo/assets/ArcProgress.png)
 
