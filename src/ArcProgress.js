@@ -3,16 +3,16 @@ import PropTypes from 'prop-types';
 import * as d3 from 'd3';
 
 class ArcProgress extends Component {
-    static propTypes = {
-        id: PropTypes.string,
-        height: PropTypes.number,
-        width: PropTypes.number,
-        innerRadius: PropTypes.number,
-        outerRadius: PropTypes.number,
-        backgroundColor: PropTypes.string,
-        foregroundColor: PropTypes.string,
-        percentComplete: PropTypes.number
-    }
+    // static propTypes = {
+    //     id: PropTypes.string,
+    //     height: PropTypes.number,
+    //     width: PropTypes.number,
+    //     innerRadius: PropTypes.number,
+    //     outerRadius: PropTypes.number,
+    //     backgroundColor: PropTypes.string,
+    //     foregroundColor: PropTypes.string,
+    //     percentComplete: PropTypes.number
+    // }
 
     render() {
         return (
@@ -75,12 +75,25 @@ class ArcProgress extends Component {
     }
 
     setLabel(context) {
+        const { height, width } = this.props;
         return context.append('text')
             .attr('transform', `translate(${height / 2}, ${width / 2})`)
             .attr('text-anchor', 'middle')
-            .text('English Diagnostic');
+            .attr('width', '20')
+            .text('My Label');
     }
 
 }
+
+ArcProgress.propTypes = {
+    id: PropTypes.string,
+    height: PropTypes.number,
+    width: PropTypes.number,
+    innerRadius: PropTypes.number,
+    outerRadius: PropTypes.number,
+    backgroundColor: PropTypes.string,
+    foregroundColor: PropTypes.string,
+    percentComplete: PropTypes.number
+};
 
 export default ArcProgress;
