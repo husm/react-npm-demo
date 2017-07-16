@@ -20,6 +20,7 @@ npm install react-npm-demo --save
 * Step 2: Import `AcrProgress` in your project
 
 ```Javascript
+import React, {Component} from 'react';
 import {ArcProgress} from 'react-npm-demo';
 
 class Demo extends Component {
@@ -63,11 +64,7 @@ class Demo extends Component {
     }
 }
 
-function mapStateToProps({demo}) {
-    return {demo};
-}
-
-export default connect(mapStateToProps)(Demo);
+export default Demo;
 ```
 
 The result should be like the below.
