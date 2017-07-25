@@ -16,7 +16,7 @@ class ArcProgress extends Component {
 
     render() {
         return (
-            <div ref="arc" />
+            <div className={this.props.className} ref="arc" />
         );
     }
 
@@ -41,7 +41,7 @@ class ArcProgress extends Component {
         const context = this.setContext();
         this.setBackground(context);
         this.setForeground(context);
-        this.setLabel(context);
+        // this.setLabel(context);
     }
 
     redrawArc() {
@@ -77,7 +77,6 @@ class ArcProgress extends Component {
     setLabel(context) {
         const { height, width } = this.props;
         return context.append('text')
-            .attr('transform', `translate(${height / 2}, ${width / 2})`)
             .attr('text-anchor', 'middle')
             .attr('width', '20')
             .text('My Label');
